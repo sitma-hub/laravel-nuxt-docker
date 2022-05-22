@@ -1,5 +1,5 @@
 # Excluded files
-/.docker
+# /.docker
 /.idea
 /.vscode
 /.git
