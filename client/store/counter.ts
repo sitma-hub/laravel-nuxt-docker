@@ -12,8 +12,13 @@ export const useCounter = defineStore('counter', {
         myRef: ref('hello'),
     }),
     actions: {
-        increment() {
-            this.n++;
+        increment(p=1) {
+            this.n += p;
+            if (this.n > 100) {
+                this.n = 100;
+            } else if (this.n < 0) {
+                this.n = 0;
+            }
         },
     },
     getters: {
