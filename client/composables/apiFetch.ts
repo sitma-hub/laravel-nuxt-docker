@@ -1,10 +1,10 @@
-import type { FetchOptions } from 'ohmyfetch'
+import type { FetchOptions } from "ohmyfetch";
 
 export const useApiFetch = (path: string, opts?: FetchOptions) => {
-  const config = useRuntimeConfig()
+  const config = useRuntimeConfig();
 
-  return $fetch('/api' + path, {
+  return $fetch("/api" + path, {
     baseURL: process.server ? config.apiUrlServer : config.apiUrlBrowser,
-    ...(opts && { ...opts })
-  })
-}
+    ...(opts && { ...opts }),
+  });
+};
