@@ -9,6 +9,6 @@ const counter = useCounter();
     <div>
         From API: {{ data }}
         From pinia: {{ counter.n }}
-        <button class="p-4" @click="counter.increment()">+1 number click</button>
+        <v-btn @click="counter.increment()">+1 number click</v-btn>
     </div>
 </template>
