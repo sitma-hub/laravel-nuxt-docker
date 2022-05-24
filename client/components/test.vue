@@ -28,31 +28,34 @@ const counter = useCounter();
         </v-row>
         <v-row>
           <v-col>
-            <v-btn elevation="4" color="primary" @click="counter.increment(1)"
-              >+1 number click</v-btn
-            >
+            <v-btn elevation="4" color="primary" @click="counter.increment(1)">
+              +1 number click
+            </v-btn>
           </v-col>
           <v-col>
             <v-btn
               elevation="4"
               color="secondary"
               @click="counter.increment(-1)"
-              >-1 number click</v-btn
             >
+              -1 number click
+            </v-btn>
           </v-col>
           <v-col>
-            <v-btn elevation="4" color="error" @click="counter.increment(10)"
-              >+10 number click</v-btn
-            >
+            <v-btn elevation="4" color="error" @click="counter.increment(10)">
+              +10 number click
+            </v-btn>
           </v-col>
           <v-col>
-            <v-btn elevation="4" color="accent" @click="counter.increment(-10)"
-              >-10 number click</v-btn
-            >
+            <v-btn elevation="4" color="accent" @click="counter.increment(-10)">
+              -10 number click
+            </v-btn>
           </v-col>
         </v-row>
       </v-col>
-      <v-col />
+      <v-col>
+        <chartTest />
+      </v-col>
     </v-row>
   </div>
 </template>
