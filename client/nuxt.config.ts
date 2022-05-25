@@ -14,9 +14,4 @@ export default defineNuxtConfig({
   privateRuntimeConfig: {
     apiUrlServer: process.env.API_URL_SERVER,
   },
-  vite: {
-    define: {
-      "process.env.DEBUG": false,
-    },
-  },
 });
