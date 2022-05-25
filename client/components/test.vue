@@ -6,56 +6,10 @@ const counter = useCounter();
 
 <template>
   <div>
-    <v-row>
-      <v-col>
-        From API: <strong> {{ data }} </strong>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col>
-        <h3>From pinia store:</h3>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col>
-        <v-row>
-          <v-col>
-            <v-text-field v-model="counter.n"></v-text-field>
-          </v-col>
-          <v-col>
-            <v-slider v-model="counter.n" min="0" max="100" step="1"></v-slider>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col>
-            <v-btn elevation="4" color="primary" @click="counter.increment(1)">
-              +1 number click
-            </v-btn>
-          </v-col>
-          <v-col>
-            <v-btn
-              elevation="4"
-              color="secondary"
-              @click="counter.increment(-1)"
-            >
-              -1 number click
-            </v-btn>
-          </v-col>
-          <v-col>
-            <v-btn elevation="4" color="error" @click="counter.increment(10)">
-              +10 number click
-            </v-btn>
-          </v-col>
-          <v-col>
-            <v-btn elevation="4" color="accent" @click="counter.increment(-10)">
-              -10 number click
-            </v-btn>
-          </v-col>
-        </v-row>
-      </v-col>
-      <v-col>
-        <chartTest />
-      </v-col>
-    </v-row>
+    From API: <strong> {{ data }} </strong>
+    <h3>From pinia store:</h3>
+    <Button @click="counter.increment(1)">+1 number click</Button>
+    <InputNumber v-model="counter.n" />
+    <chartTest />
   </div>
 </template>

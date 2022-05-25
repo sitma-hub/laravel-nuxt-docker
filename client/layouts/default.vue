@@ -1,14 +1,8 @@
 <template>
-  <v-app>
+  <div>
     <NavbarAppBar />
     <NavbarNavDrawer />
-    <v-lazy>
-      <v-main>
-        <slot />
-      </v-main>
-    </v-lazy>
-    <v-lazy>
-      <NavbarFooter />
-    </v-lazy>
-  </v-app>
+    <slot />
+    <NavbarFooter />
+  </div>
 </template>

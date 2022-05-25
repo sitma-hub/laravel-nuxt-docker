@@ -1,16 +1,13 @@
-import { defineNuxtConfig } from 'nuxt';
+import { defineNuxtConfig } from "nuxt";
 
 export default defineNuxtConfig({
-  buildModules: [
-    '@pinia/nuxt',
-  ],
+  buildModules: ["@pinia/nuxt"],
   css: [
-    'vuetify/lib/styles/main.sass',
-    'mdi/css/materialdesignicons.min.css',
+    "primevue/resources/themes/saga-blue/theme.css",
+    "primevue/resources/primevue.css",
+    "primeicons/primeicons.css",
   ],
-  build: {
-    transpile: ['vuetify'],
-  },
+  build: {},
   publicRuntimeConfig: {
     apiUrlBrowser: process.env.API_URL_BROWSER,
   },
@@ -19,7 +16,7 @@ export default defineNuxtConfig({
   },
   vite: {
     define: {
-      'process.env.DEBUG': false,
+      "process.env.DEBUG": false,
     },
   },
-})
+});

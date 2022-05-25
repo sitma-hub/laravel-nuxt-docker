@@ -15,8 +15,10 @@
     "chart.js": "^3.7.1",
     "mdi": "^2.2.43",
     "pinia": "^2.0.14",
+    "primeflex": "^3.2.0",
+    "primeicons": "^5.0.0",
+    "primevue": "^3.12.6",
     "sass": "^1.52.1",
-    "vue-chart-3": "^3.1.8",
-    "vuetify": "^3.0.0-beta.2"
+    "vue-chart-3": "^3.1.8"
   }
 }
