@@ -17,6 +17,7 @@ import Calendar from "primevue/calendar";
 import Dropdown from "primevue/dropdown";
 import Checkbox from "primevue/checkbox";
 import Dialog from "primevue/dialog";
+import Card from "primevue/card";
 
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.use(PrimeVue, {
@@ -116,4 +117,5 @@ export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.component("Dropdown", Dropdown);
   nuxtApp.vueApp.component("Checkbox", Checkbox);
   nuxtApp.vueApp.component("Dialog", Dialog);
+  nuxtApp.vueApp.component("Card", Card);
 });

@@ -3,7 +3,7 @@ import { defineNuxtConfig } from "nuxt";
 export default defineNuxtConfig({
   buildModules: ["@pinia/nuxt"],
   css: [
-    "primevue/resources/themes/saga-blue/theme.css",
+    "primevue/resources/themes/md-dark-indigo/theme.css",
     "primevue/resources/primevue.css",
     "primeicons/primeicons.css",
   ],

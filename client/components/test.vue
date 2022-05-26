@@ -1,20 +1,40 @@
 <script setup lang="ts">
 import { useCounter } from "~/store/counter";
-const data = await useApiFetch("/products");
 const counter = useCounter();
-const data2 = await $fetch("/api/testApi");
+const data = await useApiFetch("/products");
+const data2: any = await $fetch("/api/testApi");
 const data3 = await $fetch("/api/hello/Markus");
 const data4 = await $fetch("/api/submit", {
   method: "post",
   body: { test: 123 },
 });
-console.log("data2", data2, data3, data4);
 </script>
 
 <template>
   <div>
     <div class="grid">
-      <div class="col-12 bg-green-400">
+      <Button label="Primary" class="col" />
+      <Button label="Secondary" class="p-button-secondary col" />
+      <Button label="Success" class="p-button-success col" />
+      <Button label="Info" class="p-button-info col" />
+      <Button label="Warning" class="p-button-warning col" />
+      <Button label="Help" class="p-button-help col" />
+      <Button label="Danger" class="p-button-danger col" />
+      <div class="col-12 bg-primary-400">
+        <h3>From pinia store:</h3>
+      </div>
+      <div class="col">
+        <Card>
+          <template #header>
+            <Button @click="counter.increment(1)">+1 number click</Button>
+            <InputNumber v-model="counter.n" />
+          </template>
+        </Card>
+      </div>
+      <div class="col"><chartTest /></div>
+    </div>
+    <div class="grid">
+      <div class="col-12 bg-secondary">
         <div class="grid">
           <div class="col">
             From API 1: <strong> {{ data }} </strong>
@@ -29,18 +49,6 @@ console.log("data2", data2, data3, data4);
             From API 4: <strong> {{ data4 }} </strong>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="grid">
-      <div class="col-12 bg-primary-400">
-        <h3>From pinia store:</h3>
-      </div>
-      <div class="col">
-        <Button @click="counter.increment(1)">+1 number click</Button>
-        <InputNumber v-model="counter.n" />
-      </div>
-      <div class="col">
-        <chartTest />
       </div>
     </div>
   </div>

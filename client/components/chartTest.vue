@@ -28,7 +28,9 @@ const { barChartProps } = useBarChart({
 </script>
 
 <template>
-  <div>
-    <BarChart v-bind="barChartProps" />
-  </div>
+  <Card
+    ><template #content>
+      <BarChart v-bind="barChartProps" />
+    </template>
+  </Card>
 </template>
