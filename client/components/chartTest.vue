@@ -7,6 +7,9 @@ const options = computed(() => ({
   scales: {
     y: {
       beginAtZero: true,
+      grid: {
+        color: "rgba(255, 255, 255, 0.7)",
+      },
     },
   },
 }));
