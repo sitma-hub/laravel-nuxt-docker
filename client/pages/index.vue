@@ -3,7 +3,7 @@
     <test />
     <div class="grid">
       <div class="col">
-        <calendarTest />
+        <calendar-test />
       </div>
       <div class="col">
         <vuelidate-demo />

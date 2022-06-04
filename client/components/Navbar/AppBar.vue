@@ -10,24 +10,33 @@
     </template>
     <template #end>
       <Button
-        :icon="'pi ' + (theme.isDarkMode ? 'pi-moon' : 'pi-sun')"
+        :icon="'pi ' + (colorMode.preference === 'dark' ? 'pi-moon' : 'pi-sun')"
         class="p-button-rounded"
         :style="{
-          'background-color': !theme.isDarkMode
-            ? 'var(--gray-600)'
-            : 'var(--gray-100)',
-          color: theme.isDarkMode ? 'var(--gray-900)' : 'var(--gray-100)',
+          'background-color':
+            colorMode.preference === 'dark'
+              ? 'var(--gray-600)'
+              : 'var(--gray-100)',
+          color:
+            colorMode.preference === 'dark'
+              ? 'var(--gray-100)'
+              : 'var(--gray-900)',
         }"
-        @click="theme.toggle()"
+        @click="themeToggle()"
       />
-      <InputText placeholder="Search" type="text" />
     </template>
   </Menubar>
 </template>
 
 <script setup lang="ts">
-import { useTheme } from "~/store/theme";
-const theme = useTheme();
+const colorMode = useColorMode();
+const themeToggle = () => {
+  if (colorMode.preference === "light") {
+    colorMode.preference = "dark";
+  } else {
+    colorMode.preference = "light";
+  }
+};
 const dockBasicItems = ref([]);
 dockBasicItems.value = [
   {
@@ -157,5 +166,10 @@ dockBasicItems.value = [
 <style lang="scss">
 .layout-menubar {
   position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 998;
+  padding: 0.5rem;
 }
 </style>

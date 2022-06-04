@@ -1,13 +1,11 @@
 <template>
-  <div :style="'background-color: ' + (theme.isDarkMode ? 'black' : 'white')">
+  <div>
     <NavbarAppBar />
     <slot />
   </div>
 </template>
 
 <script setup>
-import { useTheme } from "~/store/theme";
-const theme = useTheme();
 useHead({
   titleTemplate: "MÜNCH App",
   viewport: "width=device-width, initial-scale=1, maximum-scale=1",
@@ -22,5 +20,14 @@ useHead({
 <style>
 .reset-body {
   margin: 0;
+}
+body {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.8);
+  padding-top: 4.5rem;
+}
+.dark-mode body {
+  background-color: #000000;
+  color: #ebf4f1;
 }
 </style>

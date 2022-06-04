@@ -21,7 +21,7 @@ const data4 = await $fetch("/api/submit", {
       <Button label="Warning" class="p-button-warning col" />
       <Button label="Help" class="p-button-help col" />
       <Button label="Danger" class="p-button-danger col" />
-      <div class="col-12 text-color">
+      <div class="col-12">
         <h3>From pinia store:</h3>
         <div class="grid">
           <p class="col">
