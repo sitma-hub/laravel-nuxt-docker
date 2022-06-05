@@ -7489,10 +7489,6 @@
     inset 0 0 0 1px #f44435, inset 0 0 0 1px #f44435;
 }
 
-.fc {
-  /* FullCalendar 4 */
-  /* FullCalendar 5 */
-}
 .fc.fc-unthemed .fc-toolbar .fc-button:focus {
   background: rgba(159, 168, 218, 0.76);
 }
