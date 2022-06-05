@@ -171,7 +171,7 @@
 </template>
 
 <script lang="ts">
-import { reactive, ref, onMounted } from "vue";
+import { reactive, ref } from "vue";
 import { email, required } from "@vuelidate/validators";
 import { useVuelidate } from "@vuelidate/core";
 

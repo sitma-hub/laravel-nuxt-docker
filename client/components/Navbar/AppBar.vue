@@ -33,17 +33,11 @@
 <script setup lang="ts">
 const router = useRouter();
 const colorMode = useColorMode();
-const route = useRoute();
-function enableCustomLayout(theme) {
-  route.meta.layout = theme;
-}
 const themeToggle = () => {
-  if (colorMode.preference === "light") {
+  if (colorMode.preference === "default") {
     colorMode.preference = "dark";
-    enableCustomLayout("dark");
   } else {
-    colorMode.preference = "light";
-    enableCustomLayout("default");
+    colorMode.preference = "default";
   }
 };
 const dockBasicItems = ref([]);
@@ -187,5 +181,9 @@ dockBasicItems.value = [
   left: 0;
   z-index: 998;
   padding: 0.5rem;
+  background-color: white;
+}
+.dark-mode .layout-menubar {
+  background-color: black;
 }
 </style>
