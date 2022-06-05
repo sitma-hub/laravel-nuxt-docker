@@ -17,7 +17,7 @@ useHead({
   link: [
     {
       rel: "stylesheet",
-      href: "assets/style/themes/md-light-indigo/theme.css",
+      href: "assets/style/themes/md-dark-indigo/theme.css",
     },
   ],
 });

@@ -1,12 +1,14 @@
 <template>
   <Menubar :model="dockBasicItems" class="layout-menubar">
     <template #start>
-      <img
-        alt="logo"
-        src="https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png"
-        height="40"
-        class="p-mr-2"
-      />
+      <NuxtLink to="/">
+        <img
+          alt="logo"
+          src="https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png"
+          height="40"
+          class="p-mr-2"
+        />
+      </NuxtLink>
     </template>
     <template #end>
       <Button
@@ -29,12 +31,19 @@
 </template>
 
 <script setup lang="ts">
+const router = useRouter();
 const colorMode = useColorMode();
+const route = useRoute();
+function enableCustomLayout(theme) {
+  route.meta.layout = theme;
+}
 const themeToggle = () => {
   if (colorMode.preference === "light") {
     colorMode.preference = "dark";
+    enableCustomLayout("dark");
   } else {
     colorMode.preference = "light";
+    enableCustomLayout("default");
   }
 };
 const dockBasicItems = ref([]);
@@ -159,6 +168,13 @@ dockBasicItems.value = [
   {
     label: "Quit",
     icon: "pi pi-power-off",
+  },
+  {
+    label: "Test Page",
+    icon: "pi pi-power-off",
+    command: () => {
+      navigateTo({ path: "testPage" });
+    },
   },
 ];
 </script>

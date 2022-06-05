@@ -4,9 +4,10 @@ export default defineNuxtConfig({
   buildModules: ["@pinia/nuxt"],
   modules: ["@nuxtjs/color-mode"],
   css: [
-    "primevue/resources/themes/md-dark-indigo/theme.css",
     "primevue/resources/primevue.css",
     "primeicons/primeicons.css",
+    "@/assets/style/app.scss",
+    "@/assets/style/main.scss",
   ],
   build: {},
   publicRuntimeConfig: {
