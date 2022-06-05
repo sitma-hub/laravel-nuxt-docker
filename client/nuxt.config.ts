@@ -17,8 +17,8 @@ export default defineNuxtConfig({
     apiUrlServer: process.env.API_URL_SERVER,
   },
   colorMode: {
-    preference: "default",
-    fallback: "default",
+    preference: "dark",
+    fallback: "dark",
     hid: "nuxt-color-mode-script",
     globalName: "__NUXT_COLOR_MODE__",
     componentName: "ColorScheme",

@@ -10,7 +10,7 @@ import { onMounted } from 'vue';
 <script setup>
 const colorMode = useColorMode();
 onMounted(() => {
-  colorMode.preference = "default";
+  colorMode.preference = "dark";
 });
 definePageMeta({
   layout: false,
