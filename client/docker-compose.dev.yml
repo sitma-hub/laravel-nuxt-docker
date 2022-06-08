@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   app:
@@ -16,11 +16,23 @@ services:
     networks:
       - client
       - gateway
-
+  docs:
+    build:
+      context: ./docs/
+      dockerfile: Dockerfile
+    volumes:
+      - ./docs:/app
+    networks:
+      - client
+      - gateway
+    environment:
+      - HOST=0.0.0.0
+    ports:
+      - "8084:3000"
+    command: ["yarn", "docs:dev"]
 networks:
   client:
     name: client
-
   gateway:
     name: gateway
     external: true

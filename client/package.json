@@ -1,5 +1,10 @@
 {
   "private": true,
+  "name": "muenchapp",
+  "license": "MIT",
+  "version": "1.0.0",
+  "description": "MÜNCH App",
+  "author": "Markus Petershofen",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
