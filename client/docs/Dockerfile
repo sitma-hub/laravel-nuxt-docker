@@ -6,12 +6,14 @@ RUN apk update && apk add bash
 # Set up the working directory
 RUN mkdir -p /app
 WORKDIR /app
-# COPY ./package.json /app # evtl. for production
+# evtl. for production
+COPY ./package.json /app
+RUN yarn install
 
-RUN echo "Hello World"
-RUN yarn add --dev vitepress
-
+# RUN yarn add --dev vitepress
+# RUN yarn docs:build
 # Expose the Vitepress port
+# EXPOSE 5173
 EXPOSE 3000
 # Export the Vite websocket port
 # EXPOSE 24678
