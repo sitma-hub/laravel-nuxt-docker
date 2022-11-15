@@ -31,7 +31,7 @@
 </template>
 
 <script setup lang="ts">
-const router = useRouter();
+// const router = useRouter();
 const colorMode = useColorMode();
 const themeToggle = () => {
   if (colorMode.preference === "default") {

@@ -5,9 +5,10 @@ FROM node:16-alpine
 RUN apk update \
 # Install git
     && apk add --no-cache git \
+# Install bash
+    && apk add bash \
 # Install nuxi package
     && npm install -g nuxi
-
 # Set up the working directory
 WORKDIR /var/www/html
 

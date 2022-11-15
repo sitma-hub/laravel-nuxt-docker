@@ -1,4 +1,3 @@
-import Card from 'primevue/card';
 <script setup>
 const show = ref(null);
 onMounted(() => {
